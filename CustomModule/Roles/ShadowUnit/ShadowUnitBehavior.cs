@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CustomModule.Item;
+using CustomModule.Item.Basilisk;
 using CustomModule.Item.MORS;
 using Exiled.API.Enums;
 using Exiled.CustomModules.API.Features.CustomRoles;
@@ -26,12 +27,12 @@ public class ShadowUnitBehavior : RoleBehaviour
         },
         CustomItems = new List<object>()
         {
-            new MORS(),
+            new Basilisk(),
         },
         AmmoBox = new Dictionary<AmmoType, ushort>()
         {
             { AmmoType.Nato9 , 120},
-            { AmmoType.Nato556 , 20},
+            { AmmoType.Ammo44Cal , 20},
         }
     };
 }

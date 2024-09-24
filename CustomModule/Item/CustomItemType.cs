@@ -11,5 +11,7 @@ namespace CustomModule.Item
         public static readonly CustomItemType Raalmg = new CustomItemType();
 
         public static readonly CustomItemType A7Pistol = new CustomItemType();
+
+        public static readonly CustomItemType Basilisk = new CustomItemType();
     }
 }
