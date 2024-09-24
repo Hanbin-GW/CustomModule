@@ -1,6 +1,4 @@
 using Exiled.CustomModules.API.Features.CustomItems.Items;
-using Exiled.API.Features;
-using Exiled.CustomModules.API.Features.Attributes;
 using Exiled.Events.EventArgs.Player;
 using PlayerStatsSystem;
 
@@ -15,6 +13,11 @@ namespace CustomModule.Item.MORS
             if (ev.Attacker != ev.Player && ev.DamageHandler.Base is FirearmDamageHandler firearmDamageHandler && firearmDamageHandler.WeaponType == ev.Attacker.CurrentItem.Type)
                 if(Check(ev.Attacker.CurrentItem))
                     ev.Amount *= DamageMultiplier;
+        }
+
+        protected override void PostInitialize()
+        {
+            base.PostInitialize();
         }
 
         protected override void SubscribeEvents()
@@ -32,22 +35,21 @@ namespace CustomModule.Item.MORS
         protected override void OnPickingUp(PickingUpItemEventArgs ev)
         {
             base.OnPickingUp(ev);
-
-            Log.ErrorWithContext("Test Item is being picked up.");
+            //Log.ErrorWithContext("Test Item is being picked up.");
         }
 
         /// <inheritdoc/>
         protected override void OnAcquired(bool displayMessage = true)
         {
             base.OnAcquired(displayMessage);
-            Log.ErrorWithContext("Test Item is was picked up.");
+            //Log.ErrorWithContext("Test Item is was picked up.");
         }
 
         /// <inheritdoc/>
         protected override void OnDropping(DroppingItemEventArgs ev)
         {
             base.OnDropping(ev);
-            Log.ErrorWithContext("Test Item is being dropped.");
+            //Log.ErrorWithContext("Test Item is being dropped.");
         }
     }
 }
