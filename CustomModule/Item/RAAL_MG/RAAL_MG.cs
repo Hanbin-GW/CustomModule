@@ -1,5 +1,7 @@
 using System;
 using CameraShaking;
+using Exiled.API.Enums;
+using Exiled.API.Features;
 using Exiled.CustomModules.API.Features.Attributes;
 using Exiled.CustomModules.API.Features.CustomItems;
 using Exiled.CustomModules.API.Features.CustomItems.Items.Firearms;
@@ -12,7 +14,7 @@ namespace CustomModule.Item.RAAL_MG
     {
         public override uint Id { get; set; } = CustomItemType.Raalmg;
         public override Type BehaviourComponent { get; } = typeof(RAAL_MGBehavior);
-        public override bool IsEnabled { get; set; } = false;
+        public override bool IsEnabled { get; set; } = true;
         public override ItemType ItemType { get; set; } = ItemType.GunLogicer;
         public override string Name { get; set; } = "RAAL_MG";
         public override string Description { get; set; } = "소이탄 을 사용하는 경기관총";
@@ -34,7 +36,9 @@ namespace CustomModule.Item.RAAL_MG
             ClipSize = 75,
             AmmoType = ItemType.Ammo762x39,
             MaxAmmo = 75,
-            Damage = 24.5f, 
+            Damage = 24.5f,
+            PickedUpText = new TextDisplay("You picked up <color=red>RAAL MG</color>",10,channel: TextChannelType.Broadcast),
+            SelectedText = new TextDisplay("You picked up <color=red>RAAL MG</color>",10,channel: TextChannelType.Hint)
             
         };
         public override ItemCategory ItemCategory { get; set; } = ItemCategory.Firearm;

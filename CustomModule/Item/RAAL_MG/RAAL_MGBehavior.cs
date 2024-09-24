@@ -6,6 +6,11 @@ namespace CustomModule.Item.RAAL_MG
 {
     public class RAAL_MGBehavior : ItemBehaviour
     {
+        protected override void PostInitialize()
+        {
+            base.PostInitialize();
+        }
+
         private void OnHurting(HurtingEventArgs ev)
         {
             if (ev.Attacker != null && ev.Player != null && ev.Attacker != ev.Player)

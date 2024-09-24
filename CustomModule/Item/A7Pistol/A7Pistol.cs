@@ -25,6 +25,8 @@ namespace CustomModule.Item.A7Pistol
             MaxAmmo = 7,
             ClipSize = 7,
             FiringMode = FiringMode.SemiAutomatic,
+            Damage = 65,
+            SelectedText = new TextDisplay( "you picked up A7 pistol\n<color=green>A7 개조형 권총입니다 파쇠탄을 사용합니다.</color>",5,channel: TextChannelType.Hint,canBeDisplayed:true),
         };
     }
 }

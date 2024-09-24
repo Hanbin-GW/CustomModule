@@ -29,7 +29,7 @@ namespace CustomModule.Roles.ChiefScientist
             CustomInfo = "Chief Scientist",
             UseDefaultRoleOnly = true,
             UniqueRole = RoleTypeId.Scientist,
-            SpawnedText = new TextDisplay("당신은 SCP제단의 <color=#42f2f5>연구팀 대장</color>입니다.\n검문소를 카드 없이 열수있습니다.", 10, channel: TextChannelType.Hint),
+            SpawnedText = new TextDisplay("당신은 SCP제단의 <color=#42f2f5>연구팀 대장</color>입니다.\n검문소를 카드 없이 열수있습니다.", 10, channel: TextChannelType.Broadcast),
             PreservePosition = false,
             PreserveInventory = false,
             CanActivateWarhead = true,
