@@ -1,13 +1,11 @@
 using System.Collections.Generic;
-using CustomModule.Item;
-using CustomModule.Item.RAAL_MG;
 using Exiled.API.Enums;
 using Exiled.CustomModules.API.Features.CustomRoles;
 using Exiled.CustomModules.API.Features.Inventory;
 
-namespace CustomModule.Roles.ShadowCaptain;
+namespace CustomModule.Roles.SerpentsHand;
 
-public class ShadowCaptainBehavior : RoleBehaviour
+public class SerpentsHandBehavior : RoleBehaviour
 {
     protected override void PostInitialize()
     {
@@ -18,21 +16,16 @@ public class ShadowCaptainBehavior : RoleBehaviour
     {
         Items = new List<ItemType>()
         {
-            ItemType.ArmorHeavy,
-            ItemType.KeycardMTFCaptain,
-            ItemType.GunE11SR,
-            ItemType.Adrenaline,
-            ItemType.Medkit,
+            ItemType.ArmorCombat,
+            ItemType.KeycardChaosInsurgency,
             ItemType.Radio,
-        },
-        CustomItems = new List<object>()
-        {
-            new RAAL_MG(),
+            ItemType.GunCrossvec,
+            ItemType.Jailbird,
+            ItemType.Painkillers
         },
         AmmoBox = new Dictionary<AmmoType, ushort>()
         {
-            { AmmoType.Nato556 ,120},
-            { AmmoType.Nato762 ,150},
+            { AmmoType.Nato9 ,120},
         }
     };
 }

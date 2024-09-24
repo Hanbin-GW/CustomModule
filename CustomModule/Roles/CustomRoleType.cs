@@ -9,5 +9,7 @@ namespace CustomModule.Roles
         public static readonly CustomRoleType ShadowCaptain = new CustomRoleType();
 
         public static readonly CustomRoleType ShadowUnit = new CustomRoleType();
+
+        public static readonly CustomRoleType SerpentsHand = new CustomRoleType();
     }
 }

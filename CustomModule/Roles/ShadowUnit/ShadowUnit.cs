@@ -16,7 +16,7 @@ public class ShadowUnit : CustomRole<ShadowUnitBehavior>
     public override Type BehaviourComponent { get; } = typeof(ShadowUnitBehavior);
     public override ModulePointer Config { get; set; } = new ShadowUnitConfig();
     public override bool IsEnabled { get; set; } = true;
-    public override RoleTypeId RequiredRoleToSpawn { get; set; } = RoleTypeId.NtfPrivate;
+    public override RoleTypeId Role { get; set; } = RoleTypeId.NtfPrivate;
     public override string Name { get; set; } = "Shadow Unit";
     public override string Description { get; set; } = "Shadow Company PMC 의 용병입니다.";
     public override bool IsScp { get; set; } = false;
@@ -29,9 +29,9 @@ public class ShadowUnit : CustomRole<ShadowUnitBehavior>
         MaxHealth = 100,
         Health = 100,
         MaxArtificialHealth = 0,
+        UniqueRole = RoleTypeId.NtfPrivate,
         CustomInfo = "Chief Scientist",
         UseDefaultRoleOnly = true,
-        UniqueRole = RoleTypeId.Scientist,
         SpawnedText = new TextDisplay("당신은 Shadow Company PMC 의 용병입니다.", 10,
             channel: TextChannelType.Broadcast),
         PreservePosition = false,
