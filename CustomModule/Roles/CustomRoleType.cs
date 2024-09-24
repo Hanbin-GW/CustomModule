@@ -5,5 +5,9 @@ namespace CustomModule.Roles
     public class CustomRoleType : UUCustomRoleType
     {
         public static readonly CustomRoleType O5Administrtor = new CustomRoleType();
+
+        public static readonly CustomRoleType ShadowCaptain = new CustomRoleType();
+
+        public static readonly CustomRoleType ShadowUnit = new CustomRoleType();
     }
 }

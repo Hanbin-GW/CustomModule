@@ -7,6 +7,7 @@ using Exiled.CustomModules.API.Features;
 using Exiled.CustomModules.API.Features.Attributes;
 using Exiled.CustomModules.API.Features.CustomRoles;
 using PlayerRoles;
+
 namespace CustomModule.Roles.ChiefScientist
 {
     [ModuleIdentifier]
@@ -18,7 +19,7 @@ namespace CustomModule.Roles.ChiefScientist
         public override string Description { get; set; } = "당신은 SCP제단의 연구팀 대장입니다.";
         public override uint Id { get; set; } = CustomRoleType.O5Administrtor;
         public override int MaxInstances { get; set; } = 1;
-        public override Team[] TeamsOwnership { get; set; } = new[] { Team.FoundationForces };
+        public override PlayerRoles.Team[] TeamsOwnership { get; set; } = new[] { PlayerRoles.Team.Scientists };
         public override RoleTypeId Role { get; set; } = RoleTypeId.Scientist;
         public override int Probability { get; set; } = 100;
         public override bool IsEnabled { get; set; } = true;
@@ -26,6 +27,7 @@ namespace CustomModule.Roles.ChiefScientist
         {
             MaxHealth = 100,
             Health = 100,
+            MaxArtificialHealth = 0,
             CustomInfo = "Chief Scientist",
             UseDefaultRoleOnly = true,
             UniqueRole = RoleTypeId.Scientist,
