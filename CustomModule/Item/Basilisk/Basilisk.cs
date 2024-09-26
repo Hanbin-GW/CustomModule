@@ -2,6 +2,7 @@ using System;
 using CameraShaking;
 using Exiled.API.Enums;
 using Exiled.API.Features;
+using Exiled.CustomModules.API.Enums;
 using Exiled.CustomModules.API.Features;
 using Exiled.CustomModules.API.Features.Attributes;
 using Exiled.CustomModules.API.Features.CustomItems;
@@ -13,15 +14,20 @@ public class Basilisk : CustomItem<BasiliskBehavior>
 {
     public override uint Id { get; set; } = CustomItemType.Basilisk;
     public override string Name { get; set; } = "Basilisk";
-    public override string Description { get; set; } = "대미지가 더 개량된 리볼버 입니다.";
+    public override string Description { get; set; } = "대미지가 더 개량된 리볼버 입니다.\nDamage: 75";
     public override ModulePointer Config { get; set; } = new BasiliskConfig();
     public override Type BehaviourComponent { get; } = typeof(BasiliskBehavior);
+    public override ItemType ItemType { get; set; } = ItemType.GunRevolver;
+    public override ItemCategory ItemCategory { get; set; } = ItemCategory.Firearm;
+    public override bool IsEnabled { get; set; } = true;
 
     public override SettingsBase Settings { get; set; } = new FirearmSettings()
     {
         MaxAmmo = 5,
         ClipSize = 5,
         Damage = 75,
+        FireRate = 50,
+        FiringMode  = FiringMode.SemiAutomatic,
         AmmoType = ItemType.Ammo44cal,
         RecoilSettings = new RecoilSettings()
         {

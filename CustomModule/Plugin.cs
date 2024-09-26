@@ -9,7 +9,7 @@ namespace CustomModule
     public class Plugin : Plugin<Config>
     {
         public override string Name { get; } = "Custom Module Ghost";
-        public override Version Version { get; } = new Version(0, 1, 3);
+        public override Version Version { get; } = new Version(0, 1, 4);
         public override string Author { get; } = "Hanbin-GW";
 
         private void OnRoundStarted()
